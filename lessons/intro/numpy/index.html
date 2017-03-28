@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="cs">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>
+            
+                Numpy
+            
+        </title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="/static/css/nausce.css">
+        <link rel="stylesheet" href="/static/css/body.css">
+        <link rel="stylesheet" href="/static/css/pygments-lovelace-style.css">
+        
+
+        
+        
+
+        <style>
+            
+    
+
+        </style>
+    </head>
+    
+    <body>
+        
+        <nav class="header">
+            <ul class="container menu">
+                <li><a href="/" class="logo"><h1>Nauč se Python!</h1></a></li>
+                <li><a href="/courses/" class="menu-link"><h2>Materiály</h2></a></li>
+                <li><a href="/runs/" class="menu-link"><h2>Kurzy</h2></a></li>
+            </ul>
+        </nav>
+        
+
+        
+            <div class="content">
+                <div class="alert alert-danger" role="alert">
+                    Tato stránka je momentálně v rekonstrukci.
+                    Pokud se chcete podílet na vylepšování těchto stránek,
+                    navštivte repozitář na
+                    <a href="https://github.com/pyvec/naucse.python.cz">GitHubu</a>.
+                </div>
+            </div>
+        
+
+        
+
+<div class="page">
+    <div class="container">
+
+        
+
+        
+            <h1>NumPy</h1>
+<p>Materiály jsou opět <a href="https://github.com/pyvec/naucse.python.cz/blob/master/lessons/intro/numpy/numpy-intro.ipynb">na Githubu</a>.</p>
+<p>Na příklady budete potřebovat následující soubory:</p>
+<ul>
+<li><a href="/lessons/intro/numpy/static/matrixdemo.py">matrixdemo.py</a></li>
+<li><a href="/lessons/intro/numpy/static/python.jpg">python.jpg</a></li>
+<li><a href="/lessons/intro/numpy/static/sample.wav">sample.wav</a></li>
+<li><a href="/lessons/intro/numpy/static/secret.png">secret.png</a></li>
+<li><a href="/lessons/intro/numpy/static/python-logo-template.svg">python-logo-template.svg</a></li>
+</ul>
+<hr>
+<p>Vaším úkolem je vytvořit funkci <code>analyze(array)</code> v modulu <code>maze</code>.</p>
+<p>Na vstupu bude bludiště uložené v matici, kde:</p>
+<ul>
+<li>záporné honoty představují zeď (kterou nejde projít)</li>
+<li>nezáporné hodnoty předstvaují průchozí prostor</li>
+<li>1 představuje cíl (ten je jen jeden, ale můžete to napsat i tak, aby jich mohlo být víc)</li>
+</ul>
+<p>V bludišti se lze pohybovat pouze horizontálně nebo veritkálně. Hranice matice jsou neprůchozí.</p>
+<p>Funkce vrátí objekt, který má:</p>
+<ul>
+<li>atribut <code>distances</code>: matice, kde pro každé políčko, ze kterého se dá dostat do cíle, bude délka nejkratší cesty k cíli, jinak -1</li>
+<li>atribut <code>directions</code>, matice, kde je pro každé takové políčko směr, kterým se odtud dá nejrychleji dostat do cíle, jako ASCII byte <code>^</code>, <code>v</code>, <code>&lt;</code> nebo <code>&gt;</code>; pro nedostupná políčka (ale průchozí, ne zdi) mezeru, pro cíl <code>X</code> a pro zeď <code>#</code></li>
+<li>atribut <code>is_reachable</code>: <code>True</code> pokud se dá z každého políčka, kde není zeď, dostat do cíle, jinak <code>False</code></li>
+<li>metodu <code>path(row, column)</code>: vrátí souřadnice nejkratší cesty z políčka <code>(row, column)</code> jako seznam dvojic včetně cíle a startu (pro souřadnice zdí a nedostupných políček vyhodí výjimku)</li>
+</ul>
+<p>K funkci napište testy pomocí pytestu, hezká bludiště na testování můžete získat
+<a href="https://en.wikipedia.org/wiki/Maze_generation_algorithm">generátorem</a>.</p>
+<p>Odevzdávání:</p>
+<ul>
+<li>vytvořte si nový privátní git repozitář s názvem <code>maze</code> (do něj nás pozvěte, případné kolize s existujícími repozitáři řešte e-mailem)</li>
+<li>pokud ještě nemáte v tabulce hodnocení link na váš GitHub, pošlete nám jej na e-mail</li>
+<li>na tuto úlohu budou navazovat další, všechny se budou tématicky věnovat bludišti</li>
+<li>v repozitáři odevzdávejte pomocí tagu <code>v0.1</code></li>
+<li>všechny závislosti (včetně <code>numpy</code> a <code>pytest</code>) uveďte v souboru <code>requirements.txt</code> (nemusí být s konkrétní verzí)</li>
+<li>příkaz <code>python -m pytest</code> musí po instalaci závislostí spouštět testy</li>
+<li>z kořenového adresáře repozitáře musí jít po instalaci závislostí udělat v Pythonu <code>from maze import analyze</code> a <code>analyze(array)</code></li>
+</ul>
+
+        
+
+        <hr class="lesson-end">
+
+        
+
+        
+
+    </div>
+</div>
+
+
+
+        <script type="text/javascript" src="/static/js/solutions.js"></script>
+
+        
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2>Kontakt</h2>
+                        <p>
+                            E-mail: <a href="mailto:info@pyvec.org">info@pyvec.org</a><br>
+                            GitHub: <a href="http://github.com/pyvec">github.com/pyvec</a><br>
+                            Twitter: <a href="http://twitter.com/pyvec">@pyvec</a><br>
+                            Youtube: <a href="http://www.youtube.com/pyvec">www.youtube.com/pyvec</a>
+                        </p>
+                    </div>
+                    <div class="col">
+                        <h2>Zapoj se</h2>
+                        <p>
+                            Tyto stránky na <a href="https://github.com/pyvec/naucse.python.cz">GitHubu</a>
+                            <br>
+                            Organizuj <a href="http://pyladies.cz/stan_se/">PyLadies</a>
+                        </p>
+                    </div>
+                    <div class="col">
+                        <h2>Licence</h2>
+                        <p>
+                            <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    </body>
+</html>

@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="cs">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>
+            
+                Pandas
+            
+        </title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="/static/css/nausce.css">
+        <link rel="stylesheet" href="/static/css/body.css">
+        <link rel="stylesheet" href="/static/css/pygments-lovelace-style.css">
+        
+
+        
+        
+
+        <style>
+            
+    
+
+        </style>
+    </head>
+    
+    <body>
+        
+        <nav class="header">
+            <ul class="container menu">
+                <li><a href="/" class="logo"><h1>Nauč se Python!</h1></a></li>
+                <li><a href="/courses/" class="menu-link"><h2>Materiály</h2></a></li>
+                <li><a href="/runs/" class="menu-link"><h2>Kurzy</h2></a></li>
+            </ul>
+        </nav>
+        
+
+        
+            <div class="content">
+                <div class="alert alert-danger" role="alert">
+                    Tato stránka je momentálně v rekonstrukci.
+                    Pokud se chcete podílet na vylepšování těchto stránek,
+                    navštivte repozitář na
+                    <a href="https://github.com/pyvec/naucse.python.cz">GitHubu</a>.
+                </div>
+            </div>
+        
+
+        
+
+<div class="page">
+    <div class="container">
+
+        
+
+        
+            <h1>Pandas</h1>
+<p>Materiály k tomuto cvičení jsou k dispozici <a href="https://github.com/pyvec/naucse.python.cz/blob/master/lessons/intro/pandas/pandas-intro.ipynb">na GitHubu</a>.</p>
+<p>Budete si potřebovat stáhnout tři soubory:
+<a href="/lessons/intro/pandas/static/actors.csv">actors.csv</a>,
+<a href="/lessons/intro/pandas/static/spouses.csv">spouses.csv</a>, a
+<a href="/lessons/intro/pandas/static/style-table.css">style-table.css</a>.</p>
+<hr>
+<p>Vašim úkolem za pět bodů je odpovědět na otázky a vyřešit úkoly níže.</p>
+<p>Řešení může být zpracováno buď jako Jupyter Notebook, ve kterém bude patrné,
+která část kódu odpovídá na kterou otázku, nebo jako skript v jazyce Python,
+který otázky a odpovědi bude vypisovat na standardní výstup např. tímto stylem:</p>
+<div class="codehilite"><pre><code>Počet památných stromů v Brně:
+44
+
+Celková délka deseti nejdelších řek (km):
+56289
+
+</code></pre></div><p>Repozitář musí obsahovat všechny soubory potřebné k běhu skriptu či Notebooku,
+včetně vstupních dat.
+Můžete předpokládat, že skript/notebook bude spouštěn z kořenového adresáře
+repozitáře.</p>
+<p>Kód musí názorným způsobem vypočítat výsledek ze zadaných dat, a nesmí způsobit
+neošetřenou výjimku.
+V případě Notebooku nesmí výjimku způsobit žádná buňka.</p>
+<p>Je zakázáno používat zkratky, zejména <code>import *</code> a výběr prvků bez použití
+indexeru.</p>
+<p>U úloh, kde je výstupem graf, skript graf uloží do souboru a odkáže na něj
+ze std. výstupu.
+U Notebooku musí být grafy součást výstupu.</p>
+<p>Případné grafy musí odpovídat zobrazovaným hodnotám, např. body by neměly být
+propojeny čárou, pokud interpolace mezi nimi nedává smysl.</p>
+<p>Kód musí korektně zpracovávat neznámé hodnoty (např. člověk s neznámým věkem
+nemá 0 let).</p>
+<p>K řešení použijte klasická data o pasažérech Titanicu, která jsou distribuována
+s jazykem R.
+Jsou ke stažení v repozitáři <a href="https://github.com/vincentarelbundock/Rdatasets">vincentarelbundock/Rdatasets</a>,
+konkrétně <a href="https://raw.githubusercontent.com/vincentarelbundock/Rdatasets/master/csv/datasets/Titanic.csv">zde</a>.
+Dokumentace k datům je k dispozici <a href="http://vincentarelbundock.github.io/Rdatasets/doc/datasets/Titanic.html">ve stejném repozitáři</a>.</p>
+<p>Tato data jsou z dnešního pohledu nekompletní, nicméně pro úkol použijte
+právě je.</p>
+<p>Řešení se odevzdává jako repozitář jménem <code>titanic</code> pod studentovým
+účtem na GitHubu.
+Případné výjimky (např. jméno <code>titanic</code> už používáte na něco jiného)
+řešte e-mailem.</p>
+<p>Termín je začátek příštího prvního cvičení (23.11.2016 11:00). Budemme kontorlovat větev master, není třeba vytvářet speciální tag.</p>
+<p>Otázky a úkoly:</p>
+<ul>
+<li>O kolika pasažérech Titanicu víme?</li>
+<li>Kolik procent jich přežilo?</li>
+<li>Kolik procent žen přežilo? Kolik procent mužů?</li>
+<li>Pro každou třídu vypište kolik pasažérů dané třídy nastoupilo na loď, kolik
+jich přežilo, a kolik to dělá procent přeživších.</li>
+<li>Vykreslete graf procenta přeživších podle dekády věku (t.j. procento pro
+0-9 let, 10-19 let, atd.).</li>
+<li>Závisí na sobě třída a věk pasažéra? Jak? Vykreslete graf(y), které tuto
+závislost znázorňují.</li>
+</ul>
+
+        
+
+        <hr class="lesson-end">
+
+        
+
+        
+
+    </div>
+</div>
+
+
+
+        <script type="text/javascript" src="/static/js/solutions.js"></script>
+
+        
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2>Kontakt</h2>
+                        <p>
+                            E-mail: <a href="mailto:info@pyvec.org">info@pyvec.org</a><br>
+                            GitHub: <a href="http://github.com/pyvec">github.com/pyvec</a><br>
+                            Twitter: <a href="http://twitter.com/pyvec">@pyvec</a><br>
+                            Youtube: <a href="http://www.youtube.com/pyvec">www.youtube.com/pyvec</a>
+                        </p>
+                    </div>
+                    <div class="col">
+                        <h2>Zapoj se</h2>
+                        <p>
+                            Tyto stránky na <a href="https://github.com/pyvec/naucse.python.cz">GitHubu</a>
+                            <br>
+                            Organizuj <a href="http://pyladies.cz/stan_se/">PyLadies</a>
+                        </p>
+                    </div>
+                    <div class="col">
+                        <h2>Licence</h2>
+                        <p>
+                            <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    </body>
+</html>
